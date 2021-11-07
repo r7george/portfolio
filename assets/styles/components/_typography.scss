@@ -1,0 +1,122 @@
+@import "_variables.scss";
+
+.nav {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+main {
+  * {
+    font-family: 'Merriweather', serif;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+}
+
+.main-about {
+  .main-about__blurb > .main-about__text, .skills-display-item > h4 {
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .main-about__blurb > .main-about__text {
+    font-size: 16px;
+  }
+
+}
+
+.main-projects {
+  .carousel__item__skill-bar {
+    .skill {
+      font-size: 12px;
+    }
+  }
+  .carousel__item__description {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+  }
+  .carousel__item__buttons {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.main-contact__socials__links__item {
+  > a {
+    > i {
+      font-size: 40px;
+    }
+    > p {
+      font-size: 8px;
+    }
+  }
+}
+
+.main-contact__form-section__form {
+  > label, input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    font-weight: normal;
+    .nav__link {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .main-home {
+
+    > h2 {
+      font-size: 42px;
+    }
+  }
+
+  .main-about {
+    .main-about__blurb {
+      .main-about__text {
+        font-size: 18px;
+      }
+    }
+
+    .main-about__skills > h3 {
+      font-size: 22px;
+    }
+    
+  }
+
+  .main-contact__sub-header {
+    font-size: 22px;
+  }
+
+  .main-contact__socials__links__item {
+    > a {
+      > p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .main-contact__form-section__form {
+    > label, input {
+      font-size: 18px;
+    }
+  }
+
+
+}

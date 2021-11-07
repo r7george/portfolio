@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reuben George - Portfolio</title>
+  <script src="https://kit.fontawesome.com/5abcf40da7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/styles/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- navigation section-->
+  <nav class="nav">
+    <a href="index.html" class="nav__item">
+      <img src="assets/images/logo.jpg" alt="website logo" class="nav__img">
+    </a>
+    <h2 class="nav__header">Projects</h2>
+    <ul class="nav__item" id="nav-links-mobile">
+      <li><a href="about.html" class="nav__link">about</a></li>
+      <li><a href="projects.html" class="nav__link">projects</a></li>
+      <li><a href="contact.html" class="nav__link">contact</a></li>
+    </ul>
+    <a href="javascript:void(0)" class="nav__item" onclick="getHamburgerMenu()">
+      <i class="fas fa-bars fa-2x"></i>
+    </a>
+    <ul class="nav__item">
+      <li><a href="about.html" class="nav__link">about</a></li>
+      <li><a href="projects.html" class="nav__link">projects</a></li>
+      <li><a href="contact.html" class="nav__link">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- main section, projects carousel -->
+  <main class="main-projects">
+    <h2 class="main-projects__header">Projects</h2>
+    <div class="carousel">
+      <div class="carousel__item">
+        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Project #1 Name</h3>
+        <div class="carousel__item__skill-bar">
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+        </div>
+        <p class="carousel__item__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+        </p>
+        <div class="carousel__items__buttons">
+          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+        </div>
+      </div>
+      <div class="carousel__item">
+        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Project #2 Name</h3>
+        <div class="carousel__item__skill-bar">
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+        </div>
+        <p class="carousel__item__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+        </p>
+        <div class="carousel__items__buttons">
+          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+        </div>
+      </div>
+      <div class="carousel__item">
+        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Project #3 Name</h3>
+        <div class="carousel__item__skill-bar">
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+        </div>
+        <p class="carousel__item__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+        </p>
+        <div class="carousel__items__buttons">
+          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+        </div>
+      </div>
+      <div class="carousel__item">
+        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Project #4 Name</h3>
+        <div class="carousel__item__skill-bar">
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+        </div>
+        <p class="carousel__item__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+        </p>
+        <div class="carousel__items__buttons">
+          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+        </div>
+      </div>
+      <div class="carousel__item">
+        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Project #5 Name</h3>
+        <div class="carousel__item__skill-bar">
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+        </div>
+        <p class="carousel__item__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+        </p>
+        <div class="carousel__items__buttons">
+          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+        </div>
+      </div>
+      <div class="carousel__item">
+        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Project #6 Name</h3>
+        <div class="carousel__item__skill-bar">
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+        </div>
+        <p class="carousel__item__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+        </p>
+        <div class="carousel__items__buttons">
+          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+        </div>
+      </div>
+      <div class="carousel__item">
+        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Project #1 Name</h3>
+        <div class="carousel__item__skill-bar">
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+          <span class="skill">Skill used</span>
+        </div>
+        <p class="carousel__item__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+        </p>
+        <div class="carousel__items__buttons">
+          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel__controls">
+      <button class="carousel__controls__buttons carousel__controls__buttons--selected"></button>
+      <button class="carousel__controls__buttons"></button>
+      <button class="carousel__controls__buttons"></button>
+      <button class="carousel__controls__buttons"></button>
+      <button class="carousel__controls__buttons"></button>
+      <button class="carousel__controls__buttons"></button>
+    </div>
+  </main>
+
+  <script src="assets/scripts/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reuben George - Portfolio</title>
+  <script src="https://kit.fontawesome.com/5abcf40da7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/styles/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- navigation section-->
+  <nav class="nav">
+    <a href="index.html" class="nav__item">
+      <img src="assets/images/logo.jpg" alt="website logo" class="nav__img">
+    </a>
+    <ul class="nav__item" id="nav-links-mobile">
+      <li><a href="about.html" class="nav__link">about</a></li>
+      <li><a href="projects.html" class="nav__link">projects</a></li>
+      <li><a href="contact.html" class="nav__link">contact</a></li>
+    </ul>
+    <a href="javascript:void(0)" class="nav__item" onclick="getHamburgerMenu()">
+      <i class="fas fa-bars fa-2x"></i>
+    </a>
+    <ul class="nav__item">
+      <li><a href="about.html" class="nav__link">about</a></li>
+      <li><a href="projects.html" class="nav__link">projects</a></li>
+      <li><a href="contact.html" class="nav__link">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- main text -->
+  <main class="main-home">
+    <h2 class="main-home__header">
+      Hello!
+    </h2>
+    <h2 class="main-home__header">
+      My name is <span class="color-change">Reuben George</span>,
+    </h2>
+    <h2 class="main-home__header">
+      and I am a <span class="color-change">trainee software developer</span>.
+    </h2>
+    <button class="main__btn" onclick="location.href='about.html'">Show me more!</button>
+  </main>
+
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

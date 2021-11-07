@@ -1,0 +1,29 @@
+@import "components/_variables";
+@import "components/_nav";
+@import "components/_typography";
+@import "components/_buttons";
+
+ @import "layouts/_mobile.scss";
+
+@import "pages/_home";
+@import "pages/_about";
+@import "pages/_projects";
+@import "pages/_contact";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* phone - app 374 x 667 */
+
+body {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  width: 100%;
+}
+
+/* desktop 1024 x 768 */
+

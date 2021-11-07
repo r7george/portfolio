@@ -1,0 +1,102 @@
+@import "_variables";
+
+button {
+  cursor: pointer;
+}
+
+.main__btn {
+  margin-top: 30px;
+  background-color: $tertiary-color;
+  color: $secondary-color;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 40px;
+  width: 70%;
+  font-weight: bold;
+}
+
+.main__btn:hover {
+  background-color: $secondary-color;
+  color: $tertiary-color;
+}
+
+.carousel__items__buttons {
+  display: flex;
+  justify-content: space-between;
+
+  > button {
+    width: 49%;
+    padding: 5px;
+    border-radius: 10px;
+    > p {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+
+  .carousel__preview {
+    background-color: $secondary-color;
+  }
+
+  .carousel__github {
+    background-color: $tertiary-color;
+  }
+
+}
+
+.carousel__controls {
+  &__buttons {
+    background-color: $secondary-color;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0px 6px;
+    border: 0;
+  }
+
+  &__buttons--selected {
+    background-color: $tertiary-color;
+  }
+}
+
+.clear-button, .submit-button {
+  border-radius: 5px;
+  border: none;
+  color: $primary-color;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.clear-button {
+  background-color: $secondary-color;
+}
+
+.submit-button {
+  background-color: $tertiary-color;
+}
+
+.clear-button:hover, .submit-button:hover, .carousel__preview:hover, .carousel__github:hover {
+  background-color: $quaternary-color;
+  color: $tertiary-color;
+}
+
+.carousel__preview:hover, .carousel__github:hover {
+  > p {
+    color: $tertiary-color;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .main__btn {
+    font-size: 20px;
+    width: 200px;
+    font-weight: bold;
+  }
+
+  .clear-button, .submit-button {
+    border-radius: 10px;
+    padding: 5px;
+  }
+}
+

@@ -1,0 +1,135 @@
+@import "../components/_variables.scss";
+@import "../components/_typography.scss";
+
+.main-about {
+  .main-about__blurb {
+    margin-top: 20px;
+
+    .main-about__image-frame {
+      height: 134px;
+      width: 116px;
+      background-color: $quaternary-color;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-about__text {
+      margin-top: 30px;
+      text-align: left;
+      color: $secondary-color;
+    }
+    
+  }
+
+  .main-about__divider {
+    margin: 40px 0px;
+    width: 110%;
+    background-color: $tertiary-color;
+    border: 2px solid $tertiary-color;
+  }
+
+  .main-about__skills {
+    margin-bottom: 50px;
+
+    .main-about__skills-header {
+      color: $secondary-color;
+    }
+
+    .main-about__skills-display {
+      display: grid;
+      grid-template-areas: "html js"
+                           "css python"
+                           "git github";
+      gap: 30px;
+      margin: 30px 0px;
+      padding: 20px 30px;
+      border-left: 4px solid $quaternary-color;
+      border-right: 4px solid $quaternary-color;
+
+
+      .skills-display-item {
+        height: 80px;
+        width: 80px;
+        background-color: $quaternary-color;
+        display: flex;
+        border-radius: 15px;
+        flex-direction: column;
+        justify-content: center;
+
+        > i, h4 {
+          color: $secondary-color;
+        }
+      }
+
+      .skills-display-item:hover {
+        background-color: $tertiary-color;
+      }
+
+      .skills-display-item:first-child {
+        grid-area: html;
+      }
+      .skills-display-item:nth-child(2) {
+        grid-area: js;
+      }
+      .skills-display-item:nth-child(3) {
+        grid-area: css;
+      }
+      .skills-display-item:nth-child(4) {
+        grid-area: python;
+      }
+      .skills-display-item:nth-child(5) {
+        grid-area: git;
+      }
+      .skills-display-item:nth-child(6) {
+        grid-area: github;
+      }
+      
+    }
+  }
+
+}
+
+
+@media screen and (min-width:1024px) {
+  .main-about {
+    .main-about__header {
+      display: none;
+    }
+    
+    .main-about__blurb {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 80%;
+
+      .main-about__image-frame {
+        width: 150px;
+        height: 171px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .main-about__text {
+        margin: 0;
+        width: 70%;
+      }
+    }
+
+    .main-about__divider {
+      margin: 30px 0;
+    }
+
+    .main-about__skills {
+      margin-bottom: 0;
+      .main-about__skills-display {
+        display: grid;
+        grid-template-areas: "html css js"
+                            "python github git";
+        gap: 30px 50px;
+        margin: 10px 0;
+        padding: 20px 50px;
+      }
+    }
+    
+  }
+}

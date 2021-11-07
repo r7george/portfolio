@@ -1,0 +1,13 @@
+@import "../components/_variables.scss";
+@import "../components/_typography.scss";
+
+@media screen and (min-width:1024px) {
+  .main-home {
+    padding-top: 100px;
+    width: 90%;
+
+    > .main-home__header {
+      padding: 2px;
+    }
+  }
+}

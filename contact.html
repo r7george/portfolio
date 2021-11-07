@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reuben George - Portfolio</title>
+  <script src="https://kit.fontawesome.com/5abcf40da7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/styles/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- navigation section-->
+  <nav class="nav">
+    <a href="index.html" class="nav__item">
+      <img src="assets/images/logo.jpg" alt="website logo" class="nav__img">
+    </a>
+    <h2 class="nav__header">Contact Me</h2>
+    <ul class="nav__item" id="nav-links-mobile">
+      <li><a href="about.html" class="nav__link">about</a></li>
+      <li><a href="projects.html" class="nav__link">projects</a></li>
+      <li><a href="contact.html" class="nav__link">contact</a></li>
+    </ul>
+    <a href="javascript:void(0)" class="nav__item" onclick="getHamburgerMenu()">
+      <i class="fas fa-bars fa-2x"></i>
+    </a>
+    <ul class="nav__item">
+      <li><a href="about.html" class="nav__link">about</a></li>
+      <li><a href="projects.html" class="nav__link">projects</a></li>
+      <li><a href="contact.html" class="nav__link">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- main section (contact form) -->
+  <main class="main-contact">
+    <h2 class="main-contact__header">Contact</h2>
+    <div class="main-contact__socials">
+      <h3 class="main-contact__sub-header">Find me on</h3>
+      <div class="main-contact__socials__links">
+        <div class="main-contact__socials__links__item">
+          <a href="https://www.linkedin.com/in/reuben-george-19805014a/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            <p>LinkedIn</p>
+          </a>
+        </div>
+        <div class="main-contact__socials__links__item">
+          <a href="https://github.com/r7george" target="_blank">
+            <i class="fab fa-github-square"></i>
+            <p>GitHub</p>
+          </a>
+        </div>
+        <div class="main-contact__socials__links__item">
+          <a href="https://twitter.com/r_george7" target="_blank">
+            <i class="fab fa-twitter-square"></i>
+            <p>Twitter</p>
+          </a>
+        </div>
+        <div class="main-contact__socials__links__item">
+          <a href="assets/documents/Reuben_George_CV.pdf" target="_blank">
+            <i class="fas fa-file-pdf"></i>
+            <p>CV</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="main-contact__form-section">
+      <h3 class="main-contact__sub-header">or send me an email!</h3>
+      <form class="main-contact__form-section__form">
+        <label for="name" class="main-contact__form-section__form__label-name">Name</label>
+        <input name="name" type="text" class="text-field main-contact__form-section__form__text-name" required>
+
+        <label for="email" class="main-contact__form-section__form__label-email">Email</label>
+        <input name="email" type="text" class="text-field main-contact__form-section__form__text-email" required>
+
+        <label for="message" class="main-contact__form-section__form__label-message">Message</label>
+        <textarea name="message" id="text-area" cols="25" rows="3" class="text-field main-contact__form-section__form__text-message" required></textarea>
+
+        <input type="reset" value="Clear" class="clear-button">
+        <input type="submit" class="submit-button">
+      </form>
+    </div>
+      
+  </main>
+
+  <script src="assets/scripts/main.js"></script>
+
+</body>
+
+</html>

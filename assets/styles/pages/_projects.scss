@@ -1,0 +1,89 @@
+@import "../components/_variables.scss";
+@import "../components/_typography.scss";
+
+.main-projects {
+  .carousel {
+    &__item {
+      display: none;
+      
+      &__image {
+        width: 100%;
+        border: 15px solid $quaternary-color;
+        border-bottom: none;
+        border-radius: 15px;
+      }
+
+      &__header {
+        text-align: left;
+        color: $secondary-color;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      &__skill-bar {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 5px;
+
+        .skill {
+          background-color: $quaternary-color;
+          color: $secondary-color;
+          padding: 5px;
+          margin-right: 5px;
+          border-radius: 8px;
+        }
+      }
+      
+      &__description {
+        color: $secondary-color;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__item:first-child {
+      display: block;
+    }
+
+    &__controls {
+      display: inline-flex;
+      margin: 20px 0;
+
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-projects {
+    height: 65vh;
+    justify-content: center;
+
+    &__header {
+      display: none;
+
+    }
+
+    .carousel {
+      display: inline-flex;
+      justify-content: space-evenly;
+      
+      &__item:nth-child(2) {
+        display: inline;
+      }
+      &__item:first-child {
+        display: inline;
+      }
+
+      &__item {
+        width: 40%;
+      }
+
+      &__controls {
+        margin: 30px 0;
+      }
+    }
+
+  }
+
+}
