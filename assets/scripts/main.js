@@ -7,4 +7,3 @@ function getHamburgerMenu() {
     nav.style.display = "flex";
   }
 }
-
