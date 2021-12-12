@@ -1,79 +1,98 @@
 .nav {
-  display: inline-flex;
-  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 30px 30px 30px;
 }
-.nav > a {
-  text-decoration: none;
-}
-.nav > a > .nav__img {
-  width: 50px;
+.nav__logo {
+  width: 75px;
   height: auto;
 }
-.nav > h2 {
+.nav__header {
   display: none;
 }
-.nav i {
+.nav__menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 60%;
+  background-color: #E59C23;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav__item {
+  font-size: 3em;
+  background-color: #E59C23;
+  color: #142430;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 25px;
+}
+.nav__hamburger {
+  z-index: 100;
+  padding: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.nav__hamburger .menuIcon {
   color: #E59C23;
 }
-.nav i:hover {
-  color: #E6F4F1;
-}
-.nav > ul {
+.nav__hamburger .closeIcon {
+  background-color: transparent;
   display: none;
+  color: #142430;
 }
-.nav #nav-links-mobile > li {
-  list-style-type: none;
-  margin: 0px 3px;
-}
-.nav #nav-links-mobile > li > a {
-  padding: 7px;
-  text-decoration: none;
-  border-radius: 20px;
-  color: #E6F4F1;
-}
-.nav #nav-links-mobile > li > a:hover {
-  background-color: #E59C23;
+
+.showMenu {
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 1024px) {
   .nav {
     padding: 50px 80px 50px 80px;
   }
-  .nav i, .nav #nav-links-mobile {
-    display: none;
+  .nav__logo {
+    width: 86px;
+    height: auto;
   }
-  .nav > .nav__header {
+  .nav__header {
     display: inline-flex;
     color: #E6F4F1;
     font-weight: bold;
     margin-left: 50px;
   }
-  .nav > a > .nav__img {
-    width: 86px;
-    height: auto;
+  .nav__hamburger {
+    display: none;
   }
-  .nav > ul {
-    display: inline-flex;
+  .nav__menu {
+    transform: translateY(0);
+    transition: none;
+    position: static;
+    background-color: #142430;
+    flex-direction: row;
   }
-  .nav > ul > li {
-    list-style-type: none;
+  .nav__item {
+    color: #E6F4F1;
     margin: 0px 10px;
-  }
-  .nav > ul > li > a {
+    font-size: 20px;
+    font-weight: normal;
+    background-color: transparent;
     padding: 10px;
     border-radius: 40px;
-    text-decoration: none;
-    color: #E6F4F1;
   }
-  .nav > ul > li:nth-child(3) {
-    margin: 0 0 0 10px;
-  }
-
-  .nav__link:hover {
+  .nav__item:hover {
     background-color: #E59C23;
+  }
+  .nav__item:nth-child(3) {
+    margin: 0 0 0 10px;
   }
 }
 .nav {
@@ -520,34 +539,38 @@ main h4 {
     font-size: 18px;
   }
 }
-.main-about .main-about__blurb {
-  margin-top: 20px;
-}
-.main-about .main-about__blurb .main-about__image-frame {
-  height: 134px;
-  width: 116px;
+.main-about__image-frame {
+  height: 144px;
+  width: 126px;
   background-color: #708090;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main-about .main-about__blurb .main-about__text {
+.main-about__image-frame > img {
+  height: 134px;
+  width: 116px;
+}
+.main-about__text {
   margin-top: 30px;
   text-align: left;
   color: #E6F4F1;
 }
-.main-about .main-about__divider {
+.main-about__divider {
   margin: 40px 0px;
   width: 110%;
   background-color: #E59C23;
   border: 2px solid #E59C23;
 }
-.main-about .main-about__skills {
+.main-about__skills {
   margin-bottom: 50px;
 }
-.main-about .main-about__skills .main-about__skills-header {
+.main-about__skills-header {
   color: #E6F4F1;
 }
-.main-about .main-about__skills .main-about__skills-display {
+.main-about__skills-display {
   display: grid;
   grid-template-areas: "html js" "css python" "git github";
   gap: 30px;
@@ -556,7 +579,7 @@ main h4 {
   border-left: 4px solid #708090;
   border-right: 4px solid #708090;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item {
+.main-about__skills-display .skills-display-item {
   height: 80px;
   width: 80px;
   background-color: #708090;
@@ -565,58 +588,61 @@ main h4 {
   flex-direction: column;
   justify-content: center;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item > i, .main-about .main-about__skills .main-about__skills-display .skills-display-item h4 {
+.main-about__skills-display .skills-display-item > i, .main-about__skills-display .skills-display-item h4 {
   color: #E6F4F1;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item:hover {
+.main-about__skills-display .skills-display-item:hover {
   background-color: #E59C23;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item:first-child {
+.main-about__skills-display .skills-display-item:first-child {
   grid-area: html;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item:nth-child(2) {
+.main-about__skills-display .skills-display-item:nth-child(2) {
   grid-area: js;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item:nth-child(3) {
+.main-about__skills-display .skills-display-item:nth-child(3) {
   grid-area: css;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item:nth-child(4) {
+.main-about__skills-display .skills-display-item:nth-child(4) {
   grid-area: python;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item:nth-child(5) {
+.main-about__skills-display .skills-display-item:nth-child(5) {
   grid-area: git;
 }
-.main-about .main-about__skills .main-about__skills-display .skills-display-item:nth-child(6) {
+.main-about__skills-display .skills-display-item:nth-child(6) {
   grid-area: github;
 }
 
 @media screen and (min-width: 1024px) {
-  .main-about .main-about__header {
+  .main-about__header {
     display: none;
   }
-  .main-about .main-about__blurb {
-    margin: 0;
+  .main-about__blurb {
     display: flex;
     align-items: center;
     width: 80%;
   }
-  .main-about .main-about__blurb .main-about__image-frame {
-    width: 150px;
-    height: 171px;
+  .main-about__image-frame {
+    width: 160px;
+    height: 181px;
     margin-right: auto;
     margin-left: auto;
   }
-  .main-about .main-about__blurb .main-about__text {
+  .main-about__image-frame > img {
+    width: 150px;
+    height: 171px;
+  }
+  .main-about__text {
     margin: 0;
     width: 70%;
   }
-  .main-about .main-about__divider {
+  .main-about__divider {
     margin: 30px 0;
   }
-  .main-about .main-about__skills {
+  .main-about__skills {
     margin-bottom: 0;
   }
-  .main-about .main-about__skills .main-about__skills-display {
+  .main-about__skills-display {
     display: grid;
     grid-template-areas: "html css js" "python github git";
     gap: 30px 50px;
@@ -707,11 +733,12 @@ main h4 {
   }
 }
 .main-projects .carousel__item {
-  display: none;
+  display: block;
+  margin-bottom: 30px;
 }
 .main-projects .carousel__item__image {
   width: 100%;
-  border: 15px solid #708090;
+  border: 10px solid #708090;
   border-bottom: none;
   border-radius: 15px;
 }
@@ -739,37 +766,25 @@ main h4 {
   text-align: left;
   margin-bottom: 5px;
 }
-.main-projects .carousel__item:first-child {
-  display: block;
-}
-.main-projects .carousel__controls {
-  display: inline-flex;
-  margin: 20px 0;
-}
 
 @media screen and (min-width: 1024px) {
   .main-projects {
-    height: 65vh;
     justify-content: center;
   }
   .main-projects__header {
     display: none;
   }
   .main-projects .carousel {
-    display: inline-flex;
+    display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
-  .main-projects .carousel__item:nth-child(2) {
-    display: inline;
-  }
-  .main-projects .carousel__item:first-child {
-    display: inline;
+  .main-projects .carousel__image {
+    border: 15px solid #708090;
   }
   .main-projects .carousel__item {
     width: 40%;
-  }
-  .main-projects .carousel__controls {
-    margin: 30px 0;
+    margin-bottom: 50px;
   }
 }
 .nav {
@@ -997,6 +1012,7 @@ main h4 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Merriweather", serif;
 }
 
 /* phone - app 374 x 667 */

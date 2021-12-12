@@ -2,40 +2,45 @@
 @import "../components/_typography.scss";
 
 .main-about {
-  .main-about__blurb {
-    margin-top: 20px;
 
-    .main-about__image-frame {
+  &__image-frame {
+    height: 144px;
+    width: 126px;
+    background-color: $quaternary-color;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
       height: 134px;
       width: 116px;
-      background-color: $quaternary-color;
-      margin-left: auto;
-      margin-right: auto;
     }
-
-    .main-about__text {
-      margin-top: 30px;
-      text-align: left;
-      color: $secondary-color;
-    }
-    
   }
 
-  .main-about__divider {
+  &__text {
+    margin-top: 30px;
+    text-align: left;
+    color: $secondary-color;
+  }
+  
+  &__divider {
     margin: 40px 0px;
     width: 110%;
     background-color: $tertiary-color;
     border: 2px solid $tertiary-color;
   }
 
-  .main-about__skills {
+
+  &__skills {
     margin-bottom: 50px;
 
-    .main-about__skills-header {
+    &-header {
       color: $secondary-color;
     }
 
-    .main-about__skills-display {
+    &-display {
       display: grid;
       grid-template-areas: "html js"
                            "css python"
@@ -92,36 +97,41 @@
 
 @media screen and (min-width:1024px) {
   .main-about {
-    .main-about__header {
+    &__header {
       display: none;
     }
     
-    .main-about__blurb {
-      margin: 0;
+    &__blurb {
       display: flex;
       align-items: center;
       width: 80%;
+    }
 
-      .main-about__image-frame {
+    &__image-frame {
+      width: 160px;
+      height: 181px;
+      margin-right: auto;
+      margin-left: auto;
+
+      > img {
         width: 150px;
         height: 171px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .main-about__text {
-        margin: 0;
-        width: 70%;
       }
     }
 
-    .main-about__divider {
+    &__text {
+      margin: 0;
+      width: 70%;
+    }
+
+    &__divider {
       margin: 30px 0;
     }
 
-    .main-about__skills {
+    &__skills {
       margin-bottom: 0;
-      .main-about__skills-display {
+
+      &-display {
         display: grid;
         grid-template-areas: "html css js"
                             "python github git";

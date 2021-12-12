@@ -17,34 +17,32 @@
 <body>
   <!-- navigation section-->
   <nav class="nav">
-    <a href="index.html" class="nav__item">
-      <img src="assets/images/logo.jpg" alt="website logo" class="nav__img">
+    <a href="index.html">
+      <img src="./assets/images/logo.jpg" alt="logo" class="nav__logo">
     </a>
     <h2 class="nav__header">About Me</h2>
-    <ul class="nav__item" id="nav-links-mobile">
-      <li><a href="about.html" class="nav__link">about</a></li>
-      <li><a href="projects.html" class="nav__link">projects</a></li>
-      <li><a href="contact.html" class="nav__link">contact</a></li>
-    </ul>
-    <a href="javascript:void(0)" class="nav__item" onclick="getHamburgerMenu()">
-      <i class="fas fa-bars fa-2x"></i>
-    </a>
-    <ul class="nav__item">
-      <li><a href="about.html" class="nav__link">about</a></li>
-      <li><a href="projects.html" class="nav__link">projects</a></li>
-      <li><a href="contact.html" class="nav__link">contact</a></li>
-    </ul>
+    <div class="nav__menu">
+      <a href="./about.html" class="nav__item">about</a>
+      <a href="./projects.html" class="nav__item">projects</a>
+      <a href="./contact.html" class="nav__item">contact</a>
+    </div>
+    <button class="nav__hamburger">
+      <i class="fas fa-bars fa-3x menuIcon"></i>
+      <i class="far fa-times-circle fa-3x closeIcon"></i>
+    </button>
   </nav>
 
   <!-- main section -->
   <main class="main-about">
     <h2 class="main-about__header">About Me</h2>
     <div class="main-about__blurb">
-      <div class="main-about__image-frame"></div>
+      <div class="main-about__image-frame">
+        <!-- <img src="./assets/images/1002LBB-36.jpg" alt="picture of me"> -->
+      </div>
       <p class="main-about__text">
-        I’m Reuben, a trainee software developer at _nology.
+        Hi! I’m Reuben, a trainee software developer at _nology.
         <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam et et dictum enim. Faucibus amet ante arcu amet arcu. Amet mattis sit proin diam egestas massa. Amet magna scelerisque nunc ipsum bibendum. Faucibus amet ante arcu amet arcu. Amet mattis sit proin diam egestas massa. Amet magna scelerisque nunc ipsum bibendum.
+        Having studied mathematics at university, I’ve been exposed to programming prior to my time at _nology through optional python-based modules.​ However, I knew I wanted to pursue a career within this field and now, I’ve taken the initiative to sharpen my technical skills by enrolling on a full-stack course with _nology.​
       </p>
     </div>
     <hr class="main-about__divider">

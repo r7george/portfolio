@@ -17,23 +17,19 @@
 <body>
   <!-- navigation section-->
   <nav class="nav">
-    <a href="index.html" class="nav__item">
-      <img src="assets/images/logo.jpg" alt="website logo" class="nav__img">
+    <a href="index.html">
+      <img src="./assets/images/logo.jpg" alt="logo" class="nav__logo">
     </a>
     <h2 class="nav__header">Projects</h2>
-    <ul class="nav__item" id="nav-links-mobile">
-      <li><a href="about.html" class="nav__link">about</a></li>
-      <li><a href="projects.html" class="nav__link">projects</a></li>
-      <li><a href="contact.html" class="nav__link">contact</a></li>
-    </ul>
-    <a href="javascript:void(0)" class="nav__item" onclick="getHamburgerMenu()">
-      <i class="fas fa-bars fa-2x"></i>
-    </a>
-    <ul class="nav__item">
-      <li><a href="about.html" class="nav__link">about</a></li>
-      <li><a href="projects.html" class="nav__link">projects</a></li>
-      <li><a href="contact.html" class="nav__link">contact</a></li>
-    </ul>
+    <div class="nav__menu">
+      <a href="./about.html" class="nav__item">about</a>
+      <a href="./projects.html" class="nav__item">projects</a>
+      <a href="./contact.html" class="nav__item">contact</a>
+    </div>
+    <button class="nav__hamburger">
+      <i class="fas fa-bars fa-3x menuIcon"></i>
+      <i class="far fa-times-circle fa-3x closeIcon"></i>
+    </button>
   </nav>
 
   <!-- main section, projects carousel -->
@@ -78,102 +74,49 @@
       </div>
 
       <div class="carousel__item">
-        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
-        <h3 class="carousel__item__header">Project #3 Name</h3>
+        <img src="assets/images/morse.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Morse Translator</h3>
         <div class="carousel__item__skill-bar">
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">SCSS</span>
+          <span class="skill">JavaScript</span>
         </div>
         <p class="carousel__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+          A JavaScript web-app that can translate English to Morse and back (using a switch button). This was built using a tests-first approach in my fifth week of my _nology course.
         </p>
         <div class="carousel__items__buttons">
-          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
-          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+          <button class="carousel__preview" id="morsePreview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github" id="morseRepo"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
         </div>
       </div>
 
       <div class="carousel__item">
-        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
-        <h3 class="carousel__item__header">Project #4 Name</h3>
+        <img src="assets/images/ticketTracker.jpg" alt="Screenshot of a project" class="carousel__item__image">
+        <h3 class="carousel__item__header">Ticket Tracker</h3>
         <div class="carousel__item__skill-bar">
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
+          <span class="skill">React</span>
+          <span class="skill">JSX</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">SCSS</span>
         </div>
         <p class="carousel__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
+          A JavaScript web-app made using React. This can be used to keep track of the number of tickets completed by a company, for which that data has been imported through a js file.
         </p>
         <div class="carousel__items__buttons">
-          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
-          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
+          <button class="carousel__preview" id="ticketPreview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
+          <button class="carousel__github" id="ticketRepo"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
         </div>
       </div>
 
-      <div class="carousel__item">
-        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
-        <h3 class="carousel__item__header">Project #5 Name</h3>
-        <div class="carousel__item__skill-bar">
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-        </div>
-        <p class="carousel__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
-        </p>
-        <div class="carousel__items__buttons">
-          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
-          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
-        </div>
-      </div>
 
-      <div class="carousel__item">
-        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
-        <h3 class="carousel__item__header">Project #6 Name</h3>
-        <div class="carousel__item__skill-bar">
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-        </div>
-        <p class="carousel__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
-        </p>
-        <div class="carousel__items__buttons">
-          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
-          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
-        </div>
-      </div>
-
-      <div class="carousel__item">
-        <img src="assets/images/bears_bakery.jpg" alt="Screenshot of a project" class="carousel__item__image">
-        <h3 class="carousel__item__header">Project #1 Name</h3>
-        <div class="carousel__item__skill-bar">
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-          <span class="skill">Skill used</span>
-        </div>
-        <p class="carousel__item__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis dolor nibh in fringilla ipsum quisque amet. Varius vel suscipit dapibus purus nunc velit diam auctor sagittis.
-        </p>
-        <div class="carousel__items__buttons">
-          <button class="carousel__preview"><p><i class="fas fa-eye fa-lg"></i> &nbsp; Preview</p></button>
-          <button class="carousel__github"><p><i class="fab fa-github fa-lg"></i> &nbsp; GitHub repo</p></button>
-        </div>
-      </div>
 
     </div>
-    <div class="carousel__controls">
-      <button class="carousel__controls__buttons carousel__controls__buttons--selected"></button>
-      <button class="carousel__controls__buttons"></button>
-      <button class="carousel__controls__buttons"></button>
-      <button class="carousel__controls__buttons"></button>
-      <button class="carousel__controls__buttons"></button>
-      <button class="carousel__controls__buttons"></button>
-    </div>
+
   </main>
 
   <script src="assets/scripts/main.js"></script>
+  <script src="./assets/scripts/projects.js"></script>
 
 </body>
 

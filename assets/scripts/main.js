@@ -1,27 +1,25 @@
-const getHamburgerMenu = () => {
-  let nav = document.getElementById("nav-links-mobile");
-  if (nav.style.display === "flex") {
-    nav.style.display = "none";
-  }
-  else {
-    nav.style.display = "flex";
+const menu = document.querySelector(".nav__menu");
+const menuItem = document.querySelectorAll(".nav__item");
+const hamburger = document.querySelector(".nav__hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+const handleMenuClick = () => {
+  if(menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
   }
 }
 
+hamburger.addEventListener("click", handleMenuClick);
 
-document.querySelector("#hangmanPreview").addEventListener("click", () => {
-  window.location = `https://r7george.github.io/hangman/`;
-});
+const menuItems = document.querySelectorAll(".menuItem");
 
-document.querySelector("#hangmanRepo").addEventListener("click", () => {
-  window.location = `https://github.com/r7george/hangman`;
-});
-
-
-document.querySelector("#calculatorPreview").addEventListener("click", () => {
-  window.location = `https://r7george.github.io/calculator/`;
-});
-
-document.querySelector("#calculatorRepo").addEventListener("click", () => {
-  window.location = `https://github.com/r7george/calculator`;
+menuItems.forEach((item) => {
+  item.addEventListener("click", handleMenuClick);
 });
