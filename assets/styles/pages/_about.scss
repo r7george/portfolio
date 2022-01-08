@@ -2,6 +2,15 @@
 @import "../components/_typography.scss";
 
 .main-about {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__header {
+    text-align: center;
+    margin: 40px 0 25px 0;
+    color: $secondary-color;
+  }
 
   &__image-frame {
     height: 144px;
@@ -21,38 +30,47 @@
 
   &__text {
     margin-top: 30px;
+    font-family: $font-text;
     text-align: left;
     color: $secondary-color;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   &__divider {
     margin: 40px 0px;
-    width: 110%;
     background-color: $tertiary-color;
     border: 2px solid $tertiary-color;
   }
 
 
-  &__skills {
-    margin-bottom: 50px;
+  .skills {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
 
-    &-header {
+    &__header {
       color: $secondary-color;
+      text-align: center;
+      margin-bottom: 25px;
     }
 
-    &-display {
+    &__display {
       display: grid;
       grid-template-areas: "html js"
-                           "css python"
+                           "css sass"
+                           "react python"
+                           "testing npm"
                            "git github";
-      gap: 30px;
-      margin: 30px 0px;
-      padding: 20px 30px;
+      gap: 15px;
+      padding: 25px;
       border-left: 4px solid $quaternary-color;
       border-right: 4px solid $quaternary-color;
 
 
-      .skills-display-item {
+      &-item {
         height: 80px;
         width: 80px;
         background-color: $quaternary-color;
@@ -60,33 +78,50 @@
         border-radius: 15px;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
-        > i, h4 {
+        .fab, .fas, .skills__display-header {
           color: $secondary-color;
+        }
+
+        .skills__display-header {
+          margin-top: 5px;
         }
       }
 
-      .skills-display-item:hover {
+      &-item:hover {
         background-color: $tertiary-color;
       }
 
-      .skills-display-item:first-child {
+      &-item:first-child {
         grid-area: html;
       }
-      .skills-display-item:nth-child(2) {
+      &-item:nth-child(2) {
         grid-area: js;
       }
-      .skills-display-item:nth-child(3) {
+      &-item:nth-child(3) {
         grid-area: css;
       }
-      .skills-display-item:nth-child(4) {
+      &-item:nth-child(4) {
         grid-area: python;
       }
-      .skills-display-item:nth-child(5) {
+      &-item:nth-child(5) {
         grid-area: git;
       }
-      .skills-display-item:nth-child(6) {
+      &-item:nth-child(6) {
         grid-area: github;
+      }
+      &-item:nth-child(7) {
+        grid-area: sass;
+      }
+      &-item:nth-child(8) {
+        grid-area: react;
+      }
+      &-item:nth-child(9) {
+        grid-area: testing;
+      }
+      &-item:nth-child(10) {
+        grid-area: npm;
       }
       
     }
@@ -97,6 +132,10 @@
 
 @media screen and (min-width:1024px) {
   .main-about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
     &__header {
       display: none;
     }
@@ -105,6 +144,8 @@
       display: flex;
       align-items: center;
       width: 80%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__image-frame {
@@ -122,21 +163,25 @@
     &__text {
       margin: 0;
       width: 70%;
+      font-size: 18px;
     }
 
     &__divider {
       margin: 30px 0;
     }
 
-    &__skills {
+    .skills {
       margin-bottom: 0;
 
-      &-display {
+      &__header {
+        font-size: 22px;
+      }
+
+      &__display {
         display: grid;
-        grid-template-areas: "html css js"
-                            "python github git";
+        grid-template-areas: "html css sass js react"
+                            "python testing npm github git";
         gap: 30px 50px;
-        margin: 10px 0;
         padding: 20px 50px;
       }
     }

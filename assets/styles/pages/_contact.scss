@@ -2,176 +2,30 @@
 @import "../components/_typography.scss";
 
 .main-contact {
-  align-items: normal;
+  height: calc(100% - 99px);
 
-  &__socials {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 56px;
-
-    .main-contact__sub-header {
-      color: $secondary-color;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    &__links {
-      display: flex;
-      margin-top: 8px;
-      justify-content: space-around;
-      
-      &__item {
-        > a {
-          text-decoration: none;
-
-          > i, p {
-            color: $tertiary-color;
-          }
-
-          > i:hover, p:hover {
-            color: $quaternary-color;
-          }
-        }
-      }
-    }
+  &__header {
+    text-align: center;
+    margin: 40px 0 25px 0;
+    color: $secondary-color;
   }
-
-  &__form-section {
+  
+  .contact-links {
+    height: calc(100% - 190px);
     display: flex;
-    flex-direction: column;
-
-    .main-contact__sub-header {
-      color: $secondary-color;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    &__form {
-      margin-top: 8px;
-      display: grid;
-      grid-template-columns: 1fr 1.5fr 1fr;
-      grid-template-rows: repeat(5, 25px);
-      gap: 10px;
-      align-items: start;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-
-      > label {
-        text-align: left;
-        color: $secondary-color;
-      }
-
-      .text-field {
-        background-color: $primary-color;
-        color: $tertiary-color;
-        border: 2px solid $secondary-color;
-      }
-
-      &__label-name {
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-
-      &__text-name {
-        grid-column: 2/4;
-        grid-row: 1/2;
-      }
-
-      &__label-email {
-        grid-column: 1/2;
-        grid-row: 2/3;
-      }
-
-      &__text-email {
-        grid-column: 2/4;
-        grid-row: 2/3;
-      }
-
-      &__label-message {
-        grid-column: 1/2;
-        grid-row: 3/4;
-      }
-
-      &__text-message {
-        grid-column: 2/4;
-        grid-row: 3/5;
-      }
-
-      .clear-button {
-        grid-column: 1/2;
-        grid-row: 5/6;
-      }
-
-      .submit-button {
-        grid-column: 2/3;
-        grid-row: 5/6;
-      }
-    }
+    align-items: center;
+    justify-content: center;
   }
 }
 
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width:1024px) {
   .main-contact {
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 25px;
-
     &__header {
       display: none;
     }
 
-    &__socials {
-      width: 30%;
-
-      &__links {
-        flex-direction: column;
-        margin-top: 10px;
-
-        &__item {
-          margin: 15px 0;
-          
-          > a {
-            display: flex;
-            align-items: center;
-
-            > p {
-              margin-left: 15px;
-            }
-          }
-        }
-      }
-    }
-
-    &__form-section {
-      width: 60%;
-
-      .main-contact__sub-header {
-        color: $tertiary-color;
-      }
-
-      &__form {
-        margin-top: 25px;
-        grid-template-rows: repeat(6, 25px);
-        gap: 25px;
-
-        &__text-message {
-          grid-row: 3/6;
-        }
-  
-        .clear-button {
-          grid-row: 6/7;
-        }
-  
-        .submit-button {
-          grid-row: 6/7;
-        }
-
-        .main-contact__form-section__form__text-message {
-          height: 9em;
-        }
-      }
+    .contact-links {
+      height: calc(100% - 80px);
     }
   }
 }

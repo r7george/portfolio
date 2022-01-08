@@ -3,7 +3,7 @@
 @import "components/_typography";
 @import "components/_buttons";
 
- @import "layouts/_mobile.scss";
+//  @import "layouts/_mobile.scss";
 
 @import "pages/_home";
 @import "pages/_about";
@@ -14,17 +14,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Merriweather', serif;
+  font-family: $font-main;
 }
 
 /* phone - app 374 x 667 */
 
 body {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   background-color: $primary-color;
   width: 100%;
 }
 
 /* desktop 1024 x 768 */
-

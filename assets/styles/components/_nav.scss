@@ -1,10 +1,10 @@
-@import "_variables.scss";
+@import "./_variables";
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 24px 30px 30px 30px;
+  margin: 20px 30px 0px 30px;
 
   &__logo {
     width: 75px;
@@ -16,24 +16,28 @@
   }
 
   &__menu {
-    position: fixed;
-    transform: translateY(-100%); // moves the menu above
-    transition: transform 0.2s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    height: 60%;
-    background-color: $tertiary-color;
+    display: none;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
+    &-hamburger {
+      position: fixed;
+      transform: translateY(-100%); // moves the menu above
+      transition: transform 0.2s;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      height: 60%;
+      background-color: $tertiary-color;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+    }
   }
 
-  &__item {
+  &__item-ham {
     font-size: 3em;
     background-color: $tertiary-color;
     color: $primary-color;
@@ -44,13 +48,18 @@
 
   &__hamburger {
     z-index: 100;
-    padding: 4px;
+    padding: 10px;
     background-color: transparent;
     cursor: pointer;
     border: none;
 
+    position: fixed;
+    top: 30px;
+    right: 30px;
+
     .menuIcon {
       color: $tertiary-color;
+      
     }
 
     .closeIcon {
@@ -67,7 +76,7 @@
 
 @media screen and (min-width: 1024px) {
   .nav {
-    padding: 50px 80px 50px 80px;
+    margin: 30px 80px 0px 80px;
     
     &__logo {
       width: 86px;
@@ -75,24 +84,29 @@
     }
 
     &__header {
-      display: inline-flex;
+      display: flex;
       color: $secondary-color;
-      font-weight: bold;
-      margin-left: 50px;
+      font-size: 30px;
+      width: calc(100% - 416px);
+      justify-content: center;
     }
-
 
     &__hamburger {
       display: none;
     }
 
     &__menu {
-      transform: translateY(0);
-      transition: none;
-      position: static;
-      background-color: $primary-color;
-
+      display: flex;
       flex-direction: row;
+      background-color: $primary-color;
+      position: fixed;
+      top: 51px;
+      right: 70px;
+
+      
+      &-hamburger {
+        display: none;
+      }
     }
 
     &__item {
@@ -103,15 +117,14 @@
       background-color: transparent;
       padding: 10px;
       border-radius: 40px;
+      text-decoration: none;
 
       &:hover {
         background-color: $tertiary-color;
       }
     }
 
-    &__item:nth-child(3) {
-      margin: 0 0 0 10px;
-    }
+    
   }
     
 }

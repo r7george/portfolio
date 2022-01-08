@@ -2,16 +2,20 @@
 
 button {
   cursor: pointer;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
 }
 
 .main__btn {
-  margin-top: 30px;
+  margin-top: 40px;
   background-color: $tertiary-color;
   color: $secondary-color;
   font-size: 18px;
   padding: 20px;
   border-radius: 40px;
-  width: 70%;
+  width: 210px;
   font-weight: bold;
 }
 
@@ -20,83 +24,84 @@ button {
   color: $tertiary-color;
 }
 
-.carousel__items__buttons {
-  display: flex;
-  justify-content: space-between;
+.carousel {
 
-  > button {
+  &__btn {
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+  }
+}
+
+.project {
+  &-btn {
     width: 49%;
-    padding: 5px;
-    border-radius: 10px;
-    > p {
-      color: $primary-color;
-      font-weight: bold;
-    }
+    padding: 7px 5px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: $primary-color;
   }
-
-  .carousel__preview {
-    background-color: $secondary-color;
-  }
-
-  .carousel__github {
-    background-color: $tertiary-color;
-  }
-
-}
-
-.carousel__controls {
-  &__buttons {
-    background-color: $secondary-color;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0px 6px;
-    border: 0;
-  }
-
-  &__buttons--selected {
-    background-color: $tertiary-color;
-  }
-}
-
-.clear-button, .submit-button {
-  border-radius: 5px;
-  border: none;
-  color: $primary-color;
-  padding: 2px;
-  cursor: pointer;
-}
-
-.clear-button {
-  background-color: $secondary-color;
-}
-
-.submit-button {
-  background-color: $tertiary-color;
-}
-
-.clear-button:hover, .submit-button:hover, .carousel__preview:hover, .carousel__github:hover {
-  background-color: $quaternary-color;
-  color: $tertiary-color;
-}
-
-.carousel__preview:hover, .carousel__github:hover {
-  > p {
+  
+  &-btn:hover {
+    background-color: $quaternary-color;
     color: $tertiary-color;
   }
+
+  &__preview {
+    background-color: $secondary-color;
+  }
+
+  &__github {
+    background-color: $tertiary-color;
+  }
 }
+
+.social-btn {
+  margin: 0 15px;
+  background: transparent;
+  border: none;
+
+  .fab, .fas, .far {
+    font-size: 52px;
+    color: $tertiary-color;
+  }
+
+  &__text {
+    color: $tertiary-color;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+}
+
 
 
 @media screen and (min-width: 1024px) {
   .main__btn {
     font-size: 20px;
     width: 200px;
-    font-weight: bold;
   }
 
-  .clear-button, .submit-button {
-    border-radius: 10px;
+  .project-btn {
     padding: 5px;
+    border-radius: 10px;
+  }
+
+  .social-btn {
+    margin: 0 25px;
+
+    .fab, .fas, .far {
+      font-size: 65px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &:hover {
+      > i, p {
+        color: $secondary-color;
+      }
+    }
   }
 }
-

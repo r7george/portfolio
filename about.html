@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reuben George - Portfolio</title>
+
   <script src="https://kit.fontawesome.com/5abcf40da7.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="./assets/styles/styles.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
-</head>
 
+</head>
 <body>
-  <!-- navigation section-->
+
+  <!-- nav section -->
   <nav class="nav">
     <a href="index.html">
       <img src="./assets/images/logo.jpg" alt="logo" class="nav__logo">
     </a>
     <h2 class="nav__header">About Me</h2>
+    <div class="nav__menu-hamburger">
+      <a href="./about.html" class="nav__item-ham">about</a>
+      <a href="./projects.html" class="nav__item-ham">projects</a>
+      <a href="./contact.html" class="nav__item-ham">contact</a>
+    </div>
     <div class="nav__menu">
       <a href="./about.html" class="nav__item">about</a>
       <a href="./projects.html" class="nav__item">projects</a>
@@ -37,7 +43,7 @@
     <h2 class="main-about__header">About Me</h2>
     <div class="main-about__blurb">
       <div class="main-about__image-frame">
-        <!-- <img src="./assets/images/1002LBB-36.jpg" alt="picture of me"> -->
+        <img src="./assets/images/1002LBB-36.jpg" alt="picture of me">
       </div>
       <p class="main-about__text">
         Hi! I’m Reuben, a trainee software developer at _nology.
@@ -46,39 +52,53 @@
       </p>
     </div>
     <hr class="main-about__divider">
-    <div class="main-about__skills">
-      <h3 class="main-about__skills-header">My skills</h3>
-      <div class="main-about__skills-display">
-        <div class="skills-display-item">
+    <div class="skills">
+      <h3 class="skills__header">Tech stack</h3>
+      <div class="skills__display">
+        <div class="skills__display-item">
           <i class="fab fa-html5 fa-3x"></i>
-          <h4>HTML5</h4>
+          <h4 class="skills__display-header">HTML5</h4>
         </div>
-        <div class="skills-display-item">
+        <div class="skills__display-item">
           <i class="fab fa-js fa-3x"></i>
-          <h4>JavaScript</h4>
+          <h4 class="skills__display-header">JavaScript</h4>
         </div>
-        <div class="skills-display-item">
+        <div class="skills__display-item">
           <i class="fab fa-css3-alt fa-3x"></i>
-          <h4>CSS3</h4>
+          <h4 class="skills__display-header">CSS3</h4>
         </div>
-        <div class="skills-display-item">
+        <div class="skills__display-item">
           <i class="fab fa-python fa-3x"></i>
-          <h4>Python</h4>
+          <h4 class="skills__display-header">Python</h4>
         </div>
-        <div class="skills-display-item">
+        <div class="skills__display-item">
           <i class="fab fa-git-square fa-3x"></i>
-          <h4>Git</h4>
+          <h4 class="skills__display-header">Git</h4>
         </div>
-        <div class="skills-display-item">
+        <div class="skills__display-item">
           <i class="fab fa-github fa-3x"></i>
-          <h4>GitHub</h4>
+          <h4 class="skills__display-header">GitHub</h4>
+        </div>
+        <div class="skills__display-item">
+          <i class="fab fa-sass fa-3x"></i>
+          <h4 class="skills__display-header">Sass</h4>
+        </div>
+        <div class="skills__display-item">
+          <i class="fab fa-react fa-3x"></i>
+          <h4 class="skills__display-header">React</h4>
+        </div>
+        <div class="skills__display-item">
+          <i class="fas fa-vial fa-3x"></i>
+          <h4 class="skills__display-header">Testing</h4>
+        </div>
+        <div class="skills__display-item">
+          <i class="fab fa-npm fa-3x"></i>
+          <h4 class="skills__display-header">NPM</h4>
         </div>
       </div>
     </div>
   </main>
-  
-  <script src="assets/scripts/main.js"></script>
 
+  <script src="./assets/scripts/nav.js"></script>
 </body>
-
 </html>

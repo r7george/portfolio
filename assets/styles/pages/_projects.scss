@@ -3,16 +3,49 @@
 
 
 .main-projects {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__header {
+    text-align: center;
+    margin: 40px 0 25px 0;
+    color: $secondary-color;
+  }
+
   .carousel {
-    &__item {
-      display: block;
-      margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    &__btn {
+      > i {
+        color: $tertiary-color;
+        font-weight: bold;
+        font-size: 42px;
+      }
+
+      .fa-chevron-left {
+        margin-right: 10px;
+      }
+
+      .fa-chevron-right {
+        margin-left: 10px;
+      }
+    }
+
+    .project {
+      display: none;
+      flex-direction: column;
+      padding: 20px;
+      background-color: $quaternary-color;
+      border-radius: 15px;
+      width: 100%;
       
       &__image {
         width: 100%;
-        border: 10px solid $quaternary-color;
-        border-bottom: none;
-        border-radius: 15px;
+        // border: 10px solid $quaternary-color;
+        // border-bottom: none;
+        // border-radius: 15px;
       }
 
       &__header {
@@ -29,11 +62,12 @@
         margin-bottom: 5px;
 
         .skill {
-          background-color: $quaternary-color;
-          color: $secondary-color;
+          background-color: $tertiary-color;
+          color: $primary-color;
           padding: 5px;
           margin-right: 5px;
           border-radius: 8px;
+          font-size: 12px;
         }
       }
       
@@ -41,7 +75,18 @@
         color: $secondary-color;
         text-align: left;
         margin-bottom: 5px;
+        font-size: 14px;
+        font-family: $font-text;
       }
+
+      &__btns {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .project:first-child {
+      display: flex;
     }
   }
 }
@@ -49,24 +94,29 @@
 @media screen and (min-width: 1024px) {
   .main-projects {
     justify-content: center;
+    width: 60%;
 
     &__header {
       display: none;
     }
 
     .carousel {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
+      margin-top: 20px;
 
-      &__image {
-        border: 15px solid $quaternary-color;
-      }
+      &__btn {
 
-      &__item {
-        width: 40%;
-        margin-bottom: 50px;
+        > i{
+          font-size: 60px;
+        }
+        > i:hover {
+          color: $secondary-color;
+        }
+       
       }
+    }
+
+    .projects {
+      width: 80%;
     }
 
   }

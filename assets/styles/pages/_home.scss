@@ -1,13 +1,44 @@
 @import "../components/_variables.scss";
 @import "../components/_typography.scss";
 
+body {
+  height: 100vh;
+}
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - (99px));
+
+  &__header {
+    color: $secondary-color;
+    margin: 25px 0;
+
+    &:first-child {
+      padding-top: 0px;
+    }
+
+    .color-change {
+      color: $tertiary-color;
+    }
+  }
+}
+
 @media screen and (min-width:1024px) {
   .main-home {
-    padding-top: 100px;
     width: 90%;
+    height: calc(100% - (120px));
 
-    > .main-home__header {
-      padding: 2px;
+    &__header {
+      font-size: 45px;
+      padding: 0;
+      margin: 7px 0;
     }
   }
 }
