@@ -47,3 +47,34 @@ left.addEventListener("click", handleClickProjects);
 right.addEventListener("click", handleRightClick);
 right.addEventListener("click", handleClickProjects);
 
+
+const previewBtns = document.querySelectorAll(".project__preview");
+const repoBtns = document.querySelectorAll(".project__github");
+
+previewBtns[0].addEventListener("click", () => {
+  window.open("https://r7george.github.io/hangman/", "_blank");
+});
+repoBtns[0].addEventListener("click", () => {
+  window.open("https://github.com/r7george/hangman", "_blank");
+});
+
+previewBtns[1].addEventListener("click", () => {
+  window.open("https://r7george.github.io/calculator/", "_blank");
+});
+repoBtns[1].addEventListener("click", () => {
+  window.open("https://github.com/r7george/calculator", "_blank");
+});
+
+previewBtns[2].addEventListener("click", () => {
+  window.open("https://r7george.github.io/morse-translator/", "_blank");
+});
+repoBtns[2].addEventListener("click", () => {
+  window.open("https://github.com/r7george/morse-translator", "_blank");
+});
+
+previewBtns[3].addEventListener("click", () => {
+  window.open("https://r7george.github.io/ticket-tracker/", "_blank");
+});
+repoBtns[3].addEventListener("click", () => {
+  window.open("https://github.com/r7george/ticket-tracker", "_blank");
+});
