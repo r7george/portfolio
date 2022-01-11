@@ -5,17 +5,19 @@ const projects = document.querySelectorAll(".project");
 console.log(projects);
 
 let counter = 0;
+const projectNum = 5;
+const counterMax = projectNum - 1;
 
 const handleLeftClick = () => {
   if(counter > 0) {
     counter -= 1;
   } else {
-    counter = 3;
+    counter = counterMax;
   }
 }
 
 const handleRightClick = () => {
-  if(counter < 3) {
+  if(counter < counterMax) {
     counter += 1;
   } else {
     counter = 0;
@@ -29,15 +31,19 @@ const handleClickProjects = () => {
     projects[projects.length - 1].style.display = "none";
   } else if (counter == 1) {
     projects[1].style.display = "flex";
-    projects[2].style.display = "none";
     projects[0].style.display = "none";
+    projects[2].style.display = "none";
   } else if (counter == 2) {
     projects[2].style.display = "flex";
-    projects[3].style.display = "none";
     projects[1].style.display = "none";
+    projects[3].style.display = "none";
   } else if (counter == 3) {
     projects[3].style.display = "flex";
     projects[2].style.display = "none";
+    projects[4].style.display = "none";
+  } else if (counter == 4) {
+    projects[4].style.display = "flex";
+    projects[3].style.display = "none";
     projects[0].style.display = "none";
   }
 }
