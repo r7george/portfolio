@@ -84,3 +84,10 @@ previewBtns[3].addEventListener("click", () => {
 repoBtns[3].addEventListener("click", () => {
   window.open("https://github.com/r7george/ticket-tracker", "_blank");
 });
+
+previewBtns[4].addEventListener("click", () => {
+  window.open("https://r7george.github.io/punk-api/", "_blank");
+});
+repoBtns[4].addEventListener("click", () => {
+  window.open("https://github.com/r7george/punk-api", "_blank");
+});
