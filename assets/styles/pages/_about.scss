@@ -58,16 +58,17 @@
     }
 
     &__display {
-      display: grid;
-      grid-template-areas: "html js"
-                           "css sass"
-                           "react python"
-                           "testing npm"
-                           "git github";
-      gap: 15px;
       padding: 25px;
       border-left: 4px solid $quaternary-color;
       border-right: 4px solid $quaternary-color;
+
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
 
 
       &-item {
@@ -92,38 +93,6 @@
       &-item:hover {
         background-color: $tertiary-color;
       }
-
-      &-item:first-child {
-        grid-area: html;
-      }
-      &-item:nth-child(2) {
-        grid-area: js;
-      }
-      &-item:nth-child(3) {
-        grid-area: css;
-      }
-      &-item:nth-child(4) {
-        grid-area: python;
-      }
-      &-item:nth-child(5) {
-        grid-area: git;
-      }
-      &-item:nth-child(6) {
-        grid-area: github;
-      }
-      &-item:nth-child(7) {
-        grid-area: sass;
-      }
-      &-item:nth-child(8) {
-        grid-area: react;
-      }
-      &-item:nth-child(9) {
-        grid-area: testing;
-      }
-      &-item:nth-child(10) {
-        grid-area: npm;
-      }
-      
     }
   }
 
@@ -178,10 +147,9 @@
       }
 
       &__display {
-        display: grid;
-        grid-template-areas: "html css sass js react"
-                            "python testing npm github git";
-        gap: 30px 50px;
+        display: flex;
+        width: 65%;
+        gap: 30px;
         padding: 20px 50px;
       }
     }

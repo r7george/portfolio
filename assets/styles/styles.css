@@ -318,12 +318,16 @@ h4 {
   margin-bottom: 25px;
 }
 .main-about .skills__display {
-  display: grid;
-  grid-template-areas: "html js" "css sass" "react python" "testing npm" "git github";
-  gap: 15px;
   padding: 25px;
   border-left: 4px solid #708090;
   border-right: 4px solid #708090;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main-about .skills__display-item {
   height: 80px;
@@ -343,36 +347,6 @@ h4 {
 }
 .main-about .skills__display-item:hover {
   background-color: #E59C23;
-}
-.main-about .skills__display-item:first-child {
-  grid-area: html;
-}
-.main-about .skills__display-item:nth-child(2) {
-  grid-area: js;
-}
-.main-about .skills__display-item:nth-child(3) {
-  grid-area: css;
-}
-.main-about .skills__display-item:nth-child(4) {
-  grid-area: python;
-}
-.main-about .skills__display-item:nth-child(5) {
-  grid-area: git;
-}
-.main-about .skills__display-item:nth-child(6) {
-  grid-area: github;
-}
-.main-about .skills__display-item:nth-child(7) {
-  grid-area: sass;
-}
-.main-about .skills__display-item:nth-child(8) {
-  grid-area: react;
-}
-.main-about .skills__display-item:nth-child(9) {
-  grid-area: testing;
-}
-.main-about .skills__display-item:nth-child(10) {
-  grid-area: npm;
 }
 
 @media screen and (min-width: 1024px) {
@@ -416,9 +390,9 @@ h4 {
     font-size: 22px;
   }
   .main-about .skills__display {
-    display: grid;
-    grid-template-areas: "html css sass js react" "python testing npm github git";
-    gap: 30px 50px;
+    display: flex;
+    width: 65%;
+    gap: 30px;
     padding: 20px 50px;
   }
 }
