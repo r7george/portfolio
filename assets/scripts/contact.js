@@ -13,5 +13,5 @@ socials[2].addEventListener("click", () => {
 });
 
 socials[3].addEventListener("click", () => {
-  window.open("assets/documents/Reuben_George_CV.pdf", "_blank");
+  window.open("assets/documents/reuben-george-cv.pdf", "_blank");
 });
